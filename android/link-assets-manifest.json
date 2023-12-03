@@ -1,0 +1,25 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Borned-qZJ5V.otf",
+      "sha1": "26d225eaf130adf21099d3e7be012a5ef3bed41d"
+    },
+    {
+      "path": "assets/fonts/BornedVG5mw.ttf",
+      "sha1": "62565454a277f6fc9d503951598bd65efd85e55a"
+    },
+    {
+      "path": "assets/fonts/Casual-Regular.ttf",
+      "sha1": "f99eee31522d432fbe2b8b32b7f42109278f3644"
+    },
+    {
+      "path": "assets/fonts/borned-font/Borned-VG5mw.ttf",
+      "sha1": "62565454a277f6fc9d503951598bd65efd85e55a"
+    },
+    {
+      "path": "assets/fonts/borned-font/misc/Borned.txt",
+      "sha1": "ee08282c05bd973457be3b572cbaa3bd66cbff92"
+    }
+  ]
+}
