@@ -1,8 +1,15 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# RecipeRendezvous
+
+<img src="https://github.com/AbdullahJaspal/TicTacToe/assets/77833394/e51ac771-0c6b-4ba8-b21a-895e9ca9e6c8" width="200" height="400">
+<img src="https://github.com/AbdullahJaspal/TicTacToe/assets/77833394/f1219f7e-d1c8-4e69-b49d-a92c3884a5f9" width="200" height="400">
+<img src="https://github.com/AbdullahJaspal/TicTacToe/assets/77833394/8db8dad1-ce5a-49e7-b0d8-6164f6354d57" width="200" height="400">
+<img src="https://github.com/AbdullahJaspal/TicTacToe/assets/77833394/6d546621-a770-4152-99f6-4240222d51db" width="200" height="400">
+<img src="https://github.com/AbdullahJaspal/TicTacToe/assets/77833394/e4872321-1ed4-4f4a-b152-401075435a73" width="200" height="400">
+<img src="https://github.com/AbdullahJaspal/TicTacToe/assets/77833394/c9ab9378-ae0b-4b13-aeeb-627894936527" width="200" height="400">
 
 # Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
 ## Step 1: Start the Metro Server
 
