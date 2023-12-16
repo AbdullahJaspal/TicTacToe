@@ -68,7 +68,7 @@ const VsHuman = ({navigation}) => {
   };
 
   return (
-    <View style={{flex: 1, backgroundColor: '#FFE087', alignItems: 'center'}}>
+    <View style={{flex: 1, backgroundColor: '#FAE093', alignItems: 'center'}}>
       <View
         style={{
           backgroundColor: '#735C00',
@@ -173,7 +173,7 @@ const VsHuman = ({navigation}) => {
                   ? '#5A4900'
                   : winner === 'O'
                   ? '#B1293C'
-                  : '#FFE087',
+                  : '#FAE093',
             }}>
             {winner === '' ? `It’s a Draw!` : `${winner} is winner.`}
           </Text>
@@ -193,7 +193,7 @@ const VsHuman = ({navigation}) => {
               ...styles.resetButton,
               backgroundColor:
                 winner === 'X'
-                  ? '#FFE087'
+                  ? '#FAE093'
                   : winner === 'O'
                   ? '#E7A3A9'
                   : 'lightgray',
@@ -227,6 +227,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
+    width: '90%',
   },
   cell: {
     width: 100,

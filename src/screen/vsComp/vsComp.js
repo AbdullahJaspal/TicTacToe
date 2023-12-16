@@ -16,6 +16,32 @@ const VsComp = ({navigation}) => {
   const [gameOver, setGameOver] = useState(false);
 
   const sheet = useRef();
+
+  var Sound = require('react-native-sound');
+  Sound.setCategory('Playback');
+  var whoosh = new Sound('whoosh.mp3', Sound.MAIN_BUNDLE, error => {
+    if (error) {
+      console.log('failed to load the sound', error);
+      return;
+    }
+    // loaded successfully
+    console.log(
+      'duration in seconds: ' +
+        whoosh.getDuration() +
+        'number of channels: ' +
+        whoosh.getNumberOfChannels(),
+    );
+
+    // Play the sound with an onEnd callback
+    whoosh.play(success => {
+      if (success) {
+        console.log('successfully finished playing');
+      } else {
+        console.log('playback failed due to audio decoding errors');
+      }
+    });
+  });
+
   useEffect(() => {
     if (currentPlayer === 'O' && !gameOver) {
       const computerMove = makeComputerMove();
@@ -154,10 +180,11 @@ const VsComp = ({navigation}) => {
 
   // Function to reset the game
   const resetGame = () => {
-    setBoard(Array(9).fill(''));
-    setCurrentPlayer('X');
-    setWinner('');
-    setGameOver(false);
+    // setBoard(Array(9).fill(''));
+    // setCurrentPlayer('X');
+    // setWinner('');
+    // setGameOver(false);
+    whoosh.play();
   };
   return (
     <View style={{flex: 1, backgroundColor: '#FFE087', alignItems: 'center'}}>
@@ -325,12 +352,15 @@ const styles = StyleSheet.create({
   },
   board: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
+    flexWrap: 'wrap-reverse',
     justifyContent: 'center',
+    width: width / 1.3,
+    alignItems: 'center',
+    alignSelf: 'center',
   },
   cell: {
-    width: 100,
-    height: 100,
+    width: width / 4,
+    height: width / 4,
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 1,

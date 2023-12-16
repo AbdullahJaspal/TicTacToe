@@ -1,12 +1,20 @@
 import React from 'react';
-import {Image, Text, TouchableOpacity, View} from 'react-native';
+import {Dimensions, Image, Text, TouchableOpacity, View} from 'react-native';
+// import {BannerAd, BannerAdSize, TestIds} from 'react-native-google-mobile-ads';
 
+const {width, height} = Dimensions.get('screen');
 const Welcome = ({navigation}) => {
+  // const adUnitIdd = __DEV__
+  //   ? TestIds.BANNER
+  //   : Platform.OS === 'ios'
+  //   ? 'ca-app-pub-1229777906283605/3655753522'
+  //   : 'ca-app-pub-1229777906283605/9516215178';
+
   return (
     <View
       style={{
         flex: 1,
-        backgroundColor: '#F5DC90',
+        backgroundColor: '#FAE093',
         alignItems: 'center',
         justifyContent: 'center',
       }}>
@@ -22,7 +30,16 @@ const Welcome = ({navigation}) => {
           source={require('../../assets/images/logo.png')}
         />
       </View>
-
+      {/* <BannerAd
+        size={BannerAdSize.BANNER}
+        unitId={adUnitIdd}
+        onAdLoaded={() => {
+          console.log('Advert loaded');
+        }}
+        onAdFailedToLoad={error => {
+          console.error('Advert failed to load: ', error);
+        }}
+      /> */}
       <View
         style={{
           height: '60%',
@@ -44,10 +61,10 @@ const Welcome = ({navigation}) => {
         <View
           style={{
             flexDirection: 'row',
-            width: '80%',
+            width: '90%',
             alignSelf: 'center',
             justifyContent: 'space-between',
-            height: 150,
+            height: width / 2.6,
             alignItems: 'flex-end',
           }}>
           <TouchableOpacity
@@ -56,7 +73,11 @@ const Welcome = ({navigation}) => {
             }}>
             <Image
               source={require('../../assets/icons/man.png')}
-              style={{width: 120, height: 120}}
+              style={{
+                width: width / 3,
+                height: width / 3,
+                resizeMode: 'contain',
+              }}
             />
           </TouchableOpacity>
           <TouchableOpacity
@@ -65,7 +86,11 @@ const Welcome = ({navigation}) => {
             }}>
             <Image
               source={require('../../assets/icons/computer.png')}
-              style={{width: 120, height: 120}}
+              style={{
+                width: width / 3,
+                height: width / 3,
+                resizeMode: 'contain',
+              }}
             />
           </TouchableOpacity>
         </View>

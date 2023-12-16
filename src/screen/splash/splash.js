@@ -1,5 +1,7 @@
 import React, {useEffect} from 'react';
-import {Image, Text, View} from 'react-native';
+import {Image, Text, View, Dimensions} from 'react-native';
+
+const {width, height} = Dimensions.get('screen');
 
 const Splash = ({navigation}) => {
   useEffect(() => {
@@ -11,12 +13,12 @@ const Splash = ({navigation}) => {
     <View
       style={{
         flex: 1,
-        backgroundColor: '#FFE087',
+        backgroundColor: '#FAE093',
         alignItems: 'center',
         justifyContent: 'center',
       }}>
       <Image
-        style={{width: '100%', height: '50%', resizeMode: 'contain'}}
+        style={{width: '100%', height: width / 1.4, resizeMode: 'contain'}}
         source={require('../../assets/images/logo.png')}
       />
       <View
