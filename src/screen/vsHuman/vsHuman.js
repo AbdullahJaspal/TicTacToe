@@ -17,6 +17,48 @@ const VsHuman = ({navigation}) => {
 
   const sheet = useRef();
 
+  var Sound = require('react-native-sound');
+  Sound.setCategory('Playback');
+  var gameOverSound = new Sound('gameover.wav', Sound.MAIN_BUNDLE, error => {
+    if (error) {
+      console.log('failed to load the sound', error);
+      return;
+    }
+  });
+  var reset = new Sound('reset.wav', Sound.MAIN_BUNDLE, error => {
+    if (error) {
+      console.log('failed to load the sound', error);
+      return;
+    }
+  });
+
+  var looser = new Sound('looser.wav', Sound.MAIN_BUNDLE, error => {
+    if (error) {
+      console.log('failed to load the sound', error);
+      return;
+    }
+  });
+
+  var draw = new Sound('draw.wav', Sound.MAIN_BUNDLE, error => {
+    if (error) {
+      console.log('failed to load the sound', error);
+      return;
+    }
+  });
+
+  var win = new Sound('winner.wav', Sound.MAIN_BUNDLE, error => {
+    if (error) {
+      console.log('failed to load the sound', error);
+      return;
+    }
+  });
+  var click = new Sound('click.mp3', Sound.MAIN_BUNDLE, error => {
+    if (error) {
+      console.log('failed to load the sound', error);
+      return;
+    }
+  });
+
   useEffect(() => {
     const isBoardFull = board.every(cell => cell !== '');
 
@@ -25,8 +67,9 @@ const VsHuman = ({navigation}) => {
     if (isBoardFull === true) {
       sheet.current.open();
     }
-  }, [board]);
+  }, [board, winner]);
   const handlePress = index => {
+    click.play();
     if (board[index] === '' && winner === '') {
       const newBoard = [...board];
       newBoard[index] = currentPlayer;
@@ -36,6 +79,11 @@ const VsHuman = ({navigation}) => {
       if (winner) {
         sheet.current.open();
         setWinner(currentPlayer);
+        winner === 'X'
+          ? win.play()
+          : winner === 'O'
+          ? looser.play()
+          : draw.play();
       }
     }
   };
@@ -65,6 +113,7 @@ const VsHuman = ({navigation}) => {
     setBoard(Array(9).fill(''));
     setCurrentPlayer('X');
     setWinner('');
+    reset.play();
   };
 
   return (
@@ -182,6 +231,7 @@ const VsHuman = ({navigation}) => {
               fontSize: 16,
               fontFamily: 'Casual-Regular',
               textAlign: 'center',
+              color: 'black',
             }}>
             {winner === ''
               ? 'Congrats to both of you for equally excelling in the art of not winning.'

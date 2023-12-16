@@ -32,17 +32,48 @@ const VsComp = ({navigation}) => {
     }
   });
 
+  var looser = new Sound('looser.wav', Sound.MAIN_BUNDLE, error => {
+    if (error) {
+      console.log('failed to load the sound', error);
+      return;
+    }
+  });
+
+  var draw = new Sound('draw.wav', Sound.MAIN_BUNDLE, error => {
+    if (error) {
+      console.log('failed to load the sound', error);
+      return;
+    }
+  });
+
+  var win = new Sound('winner.wav', Sound.MAIN_BUNDLE, error => {
+    if (error) {
+      console.log('failed to load the sound', error);
+      return;
+    }
+  });
+  var click = new Sound('click.mp3', Sound.MAIN_BUNDLE, error => {
+    if (error) {
+      console.log('failed to load the sound', error);
+      return;
+    }
+  });
+
   useEffect(() => {
     if (currentPlayer === 'O' && !gameOver) {
       const computerMove = makeComputerMove();
       handleMove(computerMove);
       computerMove === undefined && sheet.current.open();
-      computerMove === undefined && gameOverSound.play();
     }
-  }, [currentPlayer]);
+  }, [currentPlayer, winner]);
+
+  useEffect(() => {
+    winner === 'X' ? win.play() : winner === 'O' ? looser.play() : draw.play();
+  }, [winner, board]);
 
   // Function to handle a player's move
   const handleMove = index => {
+    click.play();
     if (board[index] === '' && winner === '') {
       const newBoard = [...board];
       newBoard[index] = currentPlayer;
@@ -52,7 +83,11 @@ const VsComp = ({navigation}) => {
       if (winner) {
         sheet.current.open();
         setWinner(currentPlayer);
-        gameOverSound.play();
+        winner === 'X'
+          ? win.play()
+          : winner === 'O'
+          ? looser.play()
+          : draw.play();
       }
     }
   };
@@ -164,6 +199,13 @@ const VsComp = ({navigation}) => {
     for (let i = 0; i < winningCombinations.length; i++) {
       const [a, b, c] = winningCombinations[i];
       if (board[a] === player && board[b] === player && board[c] === player) {
+        win.play(success => {
+          if (success) {
+            console.log('successfully finished playing');
+          } else {
+            console.log('playback failed due to audio decoding errors');
+          }
+        });
         return true;
         // break;
       }
@@ -234,12 +276,6 @@ const VsComp = ({navigation}) => {
             </TouchableOpacity>
           ))}
         </View>
-        {/* {winner !== '' && (
-          <Text style={styles.winnerText}>{`Winner: ${winner}`}</Text>
-        )} */}
-        {/* {winner === '' && board.every(cell => cell !== '') && (
-          <Text style={styles.winnerText}>It's a draw!</Text>
-        )} */}
         <TouchableOpacity style={styles.resetButton} onPress={resetGame}>
           <Text style={styles.resetButtonText}>Reset Game</Text>
         </TouchableOpacity>
@@ -299,6 +335,7 @@ const VsComp = ({navigation}) => {
               fontSize: 16,
               fontFamily: 'Casual-Regular',
               textAlign: 'center',
+              color: 'black',
             }}>
             {winner === ''
               ? 'Congrats to both of you for equally excelling in the art of not winning.'

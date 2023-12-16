@@ -12,6 +12,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		271831DE2B2E47430024F686 /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 271831DD2B2E47420024F686 /* click.mp3 */; };
 		276A075B2B2E3D3200C7E1F2 /* reset.wav in Resources */ = {isa = PBXBuildFile; fileRef = 276A075A2B2E3D3200C7E1F2 /* reset.wav */; };
 		276A075D2B2E3DA100C7E1F2 /* gameover.wav in Resources */ = {isa = PBXBuildFile; fileRef = 276A075C2B2E3DA000C7E1F2 /* gameover.wav */; };
 		276A07612B2E41EF00C7E1F2 /* looser.wav in Resources */ = {isa = PBXBuildFile; fileRef = 276A075E2B2E41EB00C7E1F2 /* looser.wav */; };
@@ -47,6 +48,7 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TicTacToe/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = TicTacToe/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-TicTacToe-TicTacToeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TicTacToe-TicTacToeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		271831DD2B2E47420024F686 /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click.mp3; sourceTree = "<group>"; };
 		276A075A2B2E3D3200C7E1F2 /* reset.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = reset.wav; sourceTree = "<group>"; };
 		276A075C2B2E3DA000C7E1F2 /* gameover.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gameover.wav; sourceTree = "<group>"; };
 		276A075E2B2E41EB00C7E1F2 /* looser.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = looser.wav; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				271831DD2B2E47420024F686 /* click.mp3 */,
 				276A07602B2E41EE00C7E1F2 /* draw.wav */,
 				276A075E2B2E41EB00C7E1F2 /* looser.wav */,
 				276A075F2B2E41ED00C7E1F2 /* winner.wav */,
@@ -284,6 +287,7 @@
 				276A075B2B2E3D3200C7E1F2 /* reset.wav in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				276A07622B2E41EF00C7E1F2 /* winner.wav in Resources */,
+				271831DE2B2E47430024F686 /* click.mp3 in Resources */,
 				276A07612B2E41EF00C7E1F2 /* looser.wav in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				D5A5DE22CF87404581EE0859 /* Borned-qZJ5V.otf in Resources */,
