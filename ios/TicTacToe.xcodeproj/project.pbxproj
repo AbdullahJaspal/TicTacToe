@@ -12,6 +12,11 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		276A075B2B2E3D3200C7E1F2 /* reset.wav in Resources */ = {isa = PBXBuildFile; fileRef = 276A075A2B2E3D3200C7E1F2 /* reset.wav */; };
+		276A075D2B2E3DA100C7E1F2 /* gameover.wav in Resources */ = {isa = PBXBuildFile; fileRef = 276A075C2B2E3DA000C7E1F2 /* gameover.wav */; };
+		276A07612B2E41EF00C7E1F2 /* looser.wav in Resources */ = {isa = PBXBuildFile; fileRef = 276A075E2B2E41EB00C7E1F2 /* looser.wav */; };
+		276A07622B2E41EF00C7E1F2 /* winner.wav in Resources */ = {isa = PBXBuildFile; fileRef = 276A075F2B2E41ED00C7E1F2 /* winner.wav */; };
+		276A07632B2E41EF00C7E1F2 /* draw.wav in Resources */ = {isa = PBXBuildFile; fileRef = 276A07602B2E41EE00C7E1F2 /* draw.wav */; };
 		4E4DEE9C789F4FAEA1DC8B1C /* Borned-VG5mw.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69E4BDBEB8C446BD89A34029 /* Borned-VG5mw.ttf */; };
 		6C62AC644C524ECCBECF5FCB /* BornedVG5mw.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3794F9A926C74086B42DE8A2 /* BornedVG5mw.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-TicTacToe-TicTacToeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-TicTacToe-TicTacToeTests.a */; };
@@ -42,18 +47,23 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TicTacToe/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = TicTacToe/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-TicTacToe-TicTacToeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TicTacToe-TicTacToeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3794F9A926C74086B42DE8A2 /* BornedVG5mw.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = BornedVG5mw.ttf; path = ../assets/fonts/BornedVG5mw.ttf; sourceTree = "<group>"; };
+		276A075A2B2E3D3200C7E1F2 /* reset.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = reset.wav; sourceTree = "<group>"; };
+		276A075C2B2E3DA000C7E1F2 /* gameover.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gameover.wav; sourceTree = "<group>"; };
+		276A075E2B2E41EB00C7E1F2 /* looser.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = looser.wav; sourceTree = "<group>"; };
+		276A075F2B2E41ED00C7E1F2 /* winner.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = winner.wav; sourceTree = "<group>"; };
+		276A07602B2E41EE00C7E1F2 /* draw.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = draw.wav; sourceTree = "<group>"; };
+		3794F9A926C74086B42DE8A2 /* BornedVG5mw.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = BornedVG5mw.ttf; path = ../assets/fonts/BornedVG5mw.ttf; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-TicTacToe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicTacToe.debug.xcconfig"; path = "Target Support Files/Pods-TicTacToe/Pods-TicTacToe.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-TicTacToe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicTacToe.release.xcconfig"; path = "Target Support Files/Pods-TicTacToe/Pods-TicTacToe.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-TicTacToe-TicTacToeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicTacToe-TicTacToeTests.debug.xcconfig"; path = "Target Support Files/Pods-TicTacToe-TicTacToeTests/Pods-TicTacToe-TicTacToeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-TicTacToe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TicTacToe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		69E4BDBEB8C446BD89A34029 /* Borned-VG5mw.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Borned-VG5mw.ttf"; path = "../assets/fonts/borned-font/Borned-VG5mw.ttf"; sourceTree = "<group>"; };
+		69E4BDBEB8C446BD89A34029 /* Borned-VG5mw.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Borned-VG5mw.ttf"; path = "../assets/fonts/borned-font/Borned-VG5mw.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = TicTacToe/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-TicTacToe-TicTacToeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicTacToe-TicTacToeTests.release.xcconfig"; path = "Target Support Files/Pods-TicTacToe-TicTacToeTests/Pods-TicTacToe-TicTacToeTests.release.xcconfig"; sourceTree = "<group>"; };
-		B31DB96550894C94BAB23855 /* Borned.txt */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Borned.txt; path = "../assets/fonts/borned-font/misc/Borned.txt"; sourceTree = "<group>"; };
-		DD7AE829491748D2A1D30EB7 /* Borned-qZJ5V.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Borned-qZJ5V.otf"; path = "../assets/fonts/Borned-qZJ5V.otf"; sourceTree = "<group>"; };
+		B31DB96550894C94BAB23855 /* Borned.txt */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Borned.txt; path = "../assets/fonts/borned-font/misc/Borned.txt"; sourceTree = "<group>"; };
+		DD7AE829491748D2A1D30EB7 /* Borned-qZJ5V.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Borned-qZJ5V.otf"; path = "../assets/fonts/Borned-qZJ5V.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		FDC33EA440EB4BE8A35FDFF0 /* Casual-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Casual-Regular.ttf"; path = "../assets/fonts/Casual-Regular.ttf"; sourceTree = "<group>"; };
+		FDC33EA440EB4BE8A35FDFF0 /* Casual-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Casual-Regular.ttf"; path = "../assets/fonts/Casual-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +136,11 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				276A07602B2E41EE00C7E1F2 /* draw.wav */,
+				276A075E2B2E41EB00C7E1F2 /* looser.wav */,
+				276A075F2B2E41ED00C7E1F2 /* winner.wav */,
+				276A075C2B2E3DA000C7E1F2 /* gameover.wav */,
+				276A075A2B2E3D3200C7E1F2 /* reset.wav */,
 				13B07FAE1A68108700A75B9A /* TicTacToe */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* TicTacToeTests */,
@@ -169,7 +184,6 @@
 				FDC33EA440EB4BE8A35FDFF0 /* Casual-Regular.ttf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,11 +281,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				276A075B2B2E3D3200C7E1F2 /* reset.wav in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				276A07622B2E41EF00C7E1F2 /* winner.wav in Resources */,
+				276A07612B2E41EF00C7E1F2 /* looser.wav in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				D5A5DE22CF87404581EE0859 /* Borned-qZJ5V.otf in Resources */,
+				276A07632B2E41EF00C7E1F2 /* draw.wav in Resources */,
 				8B864424BC414CCBB0F9A929 /* Borned.txt in Resources */,
 				6C62AC644C524ECCBECF5FCB /* BornedVG5mw.ttf in Resources */,
+				276A075D2B2E3DA100C7E1F2 /* gameover.wav in Resources */,
 				4E4DEE9C789F4FAEA1DC8B1C /* Borned-VG5mw.ttf in Resources */,
 				F1BD82A260E142BC800189CD /* Casual-Regular.ttf in Resources */,
 			);
@@ -643,10 +662,7 @@
 					"-DFOLLY_MOBILE=1",
 					"-DFOLLY_USE_LIBCPP=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 			};
@@ -716,10 +732,7 @@
 					"-DFOLLY_MOBILE=1",
 					"-DFOLLY_USE_LIBCPP=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
