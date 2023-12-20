@@ -12,11 +12,12 @@ const {width, height} = Dimensions.get('screen');
 
 const VsHuman = ({navigation}) => {
   const [board, setBoard] = useState(Array(9).fill(''));
+
   const [currentPlayer, setCurrentPlayer] = useState('X');
   const [winner, setWinner] = useState('');
 
   const sheet = useRef();
-
+  const explosion = useRef();
   var Sound = require('react-native-sound');
   Sound.setCategory('Playback');
   var gameOverSound = new Sound('gameover.wav', Sound.MAIN_BUNDLE, error => {
@@ -28,28 +29,28 @@ const VsHuman = ({navigation}) => {
   var reset = new Sound('reset.wav', Sound.MAIN_BUNDLE, error => {
     if (error) {
       console.log('failed to load the sound', error);
-      return;
+    } else {
     }
   });
 
   var looser = new Sound('looser.wav', Sound.MAIN_BUNDLE, error => {
     if (error) {
       console.log('failed to load the sound', error);
-      return;
+    } else {
     }
   });
 
   var draw = new Sound('draw.wav', Sound.MAIN_BUNDLE, error => {
     if (error) {
       console.log('failed to load the sound', error);
-      return;
+    } else {
     }
   });
 
   var win = new Sound('winner.wav', Sound.MAIN_BUNDLE, error => {
     if (error) {
       console.log('failed to load the sound', error);
-      return;
+    } else {
     }
   });
   var click = new Sound('click.mp3', Sound.MAIN_BUNDLE, error => {
@@ -61,13 +62,11 @@ const VsHuman = ({navigation}) => {
 
   useEffect(() => {
     const isBoardFull = board.every(cell => cell !== '');
-
-    console.log('isBoardFull');
-    console.log(isBoardFull);
     if (isBoardFull === true) {
       sheet.current.open();
     }
   }, [board, winner]);
+
   const handlePress = index => {
     click.play();
     if (board[index] === '' && winner === '') {
@@ -78,12 +77,9 @@ const VsHuman = ({navigation}) => {
       const winner = checkWinner(newBoard, currentPlayer);
       if (winner) {
         sheet.current.open();
-        setWinner(currentPlayer);
-        winner === 'X'
-          ? win.play()
-          : winner === 'O'
-          ? looser.play()
-          : draw.play();
+        setWinner(winner);
+        (winner === 'X' || winner === 'O') && win.play();
+        winner === 'draw' && draw.play();
       }
     }
   };
@@ -103,8 +99,7 @@ const VsHuman = ({navigation}) => {
     for (let i = 0; i < winningCombinations.length; i++) {
       const [a, b, c] = winningCombinations[i];
       if (board[a] === player && board[b] === player && board[c] === player) {
-        return true;
-        break;
+        return player;
       }
     }
   };
@@ -172,6 +167,7 @@ const VsHuman = ({navigation}) => {
             </TouchableOpacity>
           ))}
         </View>
+
         {/* {winner !== '' && (
           <Text style={styles.winnerText}>{`Winner: ${winner}`}</Text>
         )} */}
@@ -182,6 +178,7 @@ const VsHuman = ({navigation}) => {
           <Text style={styles.resetButtonText}>Reset Game</Text>
         </TouchableOpacity>
       </View>
+      {/*Cannon which will fire whenever shoot is true*/}
 
       <RBSheet
         ref={sheet}
@@ -255,6 +252,7 @@ const VsHuman = ({navigation}) => {
             <Text style={styles.resetButtonText}>Reset Game</Text>
           </TouchableOpacity>
         </View>
+
         {/* <YourOwnComponent /> */}
       </RBSheet>
     </View>

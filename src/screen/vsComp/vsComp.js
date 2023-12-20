@@ -81,13 +81,12 @@ const VsComp = ({navigation}) => {
       setCurrentPlayer(currentPlayer === 'X' ? 'O' : 'X');
       const winner = checkWin(newBoard, currentPlayer);
       if (winner) {
+        console.log(winner);
         sheet.current.open();
         setWinner(currentPlayer);
-        winner === 'X'
-          ? win.play()
-          : winner === 'O'
-          ? looser.play()
-          : draw.play();
+        winner === 'X' && win.play();
+        winner === 'O' && looser.play();
+        winner === 'draw' && draw.play();
       }
     }
   };
@@ -199,14 +198,7 @@ const VsComp = ({navigation}) => {
     for (let i = 0; i < winningCombinations.length; i++) {
       const [a, b, c] = winningCombinations[i];
       if (board[a] === player && board[b] === player && board[c] === player) {
-        win.play(success => {
-          if (success) {
-            console.log('successfully finished playing');
-          } else {
-            console.log('playback failed due to audio decoding errors');
-          }
-        });
-        return true;
+        return player;
         // break;
       }
     }
