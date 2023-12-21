@@ -1,4 +1,4 @@
-# RecipeRendezvous
+# Tictatoe
 
 <img src="https://github.com/AbdullahJaspal/TicTacToe/assets/77833394/e51ac771-0c6b-4ba8-b21a-895e9ca9e6c8" width="200" height="400">
 <img src="https://github.com/AbdullahJaspal/TicTacToe/assets/77833394/f1219f7e-d1c8-4e69-b49d-a92c3884a5f9" width="200" height="400">
